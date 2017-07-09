@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.thepoet.controller.base.BaseController;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,18 +15,16 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Controller
-public class HelloController {
+public class HelloController extends BaseController {
 
     @Value("${first.message}")
     private String firstMessage;
-    @Value("${project.title}")
-    private String projectTitle;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public ModelAndView hello(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView("hello");
         modelAndView.addObject("firstMessage", firstMessage);
-        modelAndView.addObject("projectTitle", projectTitle.concat(" #1"));
+        modelAndView.addObject("projectTitle", super.getPageTitle("#1"));
         return modelAndView;
     }
 }

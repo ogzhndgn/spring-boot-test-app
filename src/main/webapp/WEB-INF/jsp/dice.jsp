@@ -11,9 +11,9 @@
     <title>${projectTitle}</title>
 </head>
 <body>
-Your random number is:
+Your dice :
 <h2>
-    ${randomInt}
+    ${randomIntOne} - ${randomIntTwo}
 </h2>
 </body>
 </html>

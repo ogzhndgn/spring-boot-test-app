@@ -1,27 +1,22 @@
 package org.thepoet.controller;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
+import org.thepoet.controller.base.BaseController;
 
 /**
  * @author the Poet <dogan_oguzhan@hotmail.com>
  * @date 9.07.2017
  */
 @Controller
-public class WelcomeController {
-
-    @Value("${project.title}")
-    private String projectTitle;
+public class WelcomeController extends BaseController {
 
     @RequestMapping(value = {"/", "welcome"}, method = RequestMethod.GET)
-    public ModelAndView welcome(HttpServletRequest request) {
+    public ModelAndView welcome() {
         ModelAndView modelAndView = new ModelAndView("welcome");
-        modelAndView.addObject("projectTitle", projectTitle.concat(" Welcome Page"));
+        modelAndView.addObject("projectTitle", super.getPageTitle("Welcome Page"));
         return modelAndView;
     }
 }

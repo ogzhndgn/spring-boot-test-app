@@ -11,8 +11,8 @@ import java.util.Random;
 @Service
 public class RandomService {
 
-    public int getRandomInt() {
+    public int getRandomInt(int maxValue) {
         Random random = new Random();
-        return random.nextInt(6) + 1;
+        return random.nextInt(maxValue) + 1;
     }
 }

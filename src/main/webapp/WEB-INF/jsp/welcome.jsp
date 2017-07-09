@@ -7,7 +7,7 @@
 <h2>Modules</h2>
 <ul title="Modules">
     <li><a href="${pageContext.request.contextPath}/hello">#1 Hello</a></li>
-    <li><a href="${pageContext.request.contextPath}/random-test">#2 Random</a></li>
+    <li><a href="${pageContext.request.contextPath}/dice">#2 Dice</a></li>
 </ul>
 </body>
 </html>

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.thepoet.controller.base.BaseController;
 import org.thepoet.service.RandomService;
 
 /**
@@ -13,18 +14,19 @@ import org.thepoet.service.RandomService;
  * @date 9.07.2017
  */
 @Controller
-public class RandomController {
-    @Value("${project.title}")
-    private String projectTitle;
+public class DiceController extends BaseController {
+
+    private static final int DICE = 6;
 
     @Autowired
     RandomService randomService;
 
-    @RequestMapping(value = "random-test", method = RequestMethod.GET)
+    @RequestMapping(value = "dice", method = RequestMethod.GET)
     public ModelAndView randomGet() {
-        ModelAndView modelAndView = new ModelAndView("random");
-        modelAndView.addObject("projectTitle", projectTitle.concat(" #2"));
-        modelAndView.addObject("randomInt", randomService.getRandomInt());
+        ModelAndView modelAndView = new ModelAndView("dice");
+        modelAndView.addObject("projectTitle", super.getPageTitle("#2"));
+        modelAndView.addObject("randomIntOne", randomService.getRandomInt(DICE));
+        modelAndView.addObject("randomIntTwo", randomService.getRandomInt(DICE));
         return modelAndView;
     }
 }
