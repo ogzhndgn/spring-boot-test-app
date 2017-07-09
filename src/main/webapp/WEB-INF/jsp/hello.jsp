@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>The Poet's Spring Boot Test App #1</title>
+    <title>${projectTitle}</title>
 </head>
 <body>
 ${firstMessage}

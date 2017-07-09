@@ -18,11 +18,14 @@ public class HelloController {
 
     @Value("${first.message}")
     private String firstMessage;
+    @Value("${project.title}")
+    private String projectTitle;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public ModelAndView hello(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView("hello");
         modelAndView.addObject("firstMessage", firstMessage);
+        modelAndView.addObject("projectTitle", projectTitle.concat(" #1"));
         return modelAndView;
     }
 }
