@@ -17,7 +17,7 @@ public class UserDao {
     JdbcTemplate jdbcTemplate;
 
     public List<User> getAll() {
-        String sql = "SELECT * FROM springboot.users";
+        String sql = "SELECT * FROM springboot.users ORDER BY id";
         List<User> userList = jdbcTemplate.query(sql,
                 (resultSet, i) -> {
                     User user = new User();
