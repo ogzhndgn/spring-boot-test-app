@@ -8,6 +8,7 @@
 <ul title="Modules">
     <li><a href="${pageContext.request.contextPath}/hello">#1 Hello</a></li>
     <li><a href="${pageContext.request.contextPath}/dice">#2 Dice</a></li>
+    <li><a href="${pageContext.request.contextPath}/users">#3 Users from Database</a></li>
 </ul>
 </body>
 </html>

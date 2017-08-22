@@ -21,7 +21,7 @@ public class DiceController extends BaseController {
     @Autowired
     RandomService randomService;
 
-    @RequestMapping(value = "dice", method = RequestMethod.GET)
+    @RequestMapping(value = "/dice", method = RequestMethod.GET)
     public ModelAndView randomGet() {
         ModelAndView modelAndView = new ModelAndView("dice");
         modelAndView.addObject("projectTitle", super.getPageTitle("#2"));
