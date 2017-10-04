@@ -9,6 +9,7 @@
     <li><a href="${pageContext.request.contextPath}/hello">#1 Hello</a></li>
     <li><a href="${pageContext.request.contextPath}/dice">#2 Dice</a></li>
     <li><a href="${pageContext.request.contextPath}/users">#3 Users from Database</a></li>
+    <li><a href="${pageContext.request.contextPath}/getid">#4 Get Unique Id</a></li>
 </ul>
 </body>
 </html>
