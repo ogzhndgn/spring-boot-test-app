@@ -1,7 +1,5 @@
 package org.thepoet.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.thepoet.model.User;
 
@@ -12,13 +10,12 @@ import java.util.List;
  * @date 22.08.2017
  */
 @Repository
-public class UserDao {
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+public class UserDao extends DatabaseObject {
+
 
     public List<User> getAll() {
         String sql = "SELECT * FROM springboot.users ORDER BY id";
-        List<User> userList = jdbcTemplate.query(sql,
+        List<User> userList = getJdbcTemplate().query(sql,
                 (resultSet, i) -> {
                     User user = new User();
                     user.setId(resultSet.getInt("id"));

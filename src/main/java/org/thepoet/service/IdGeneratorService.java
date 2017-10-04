@@ -1,11 +1,6 @@
 package org.thepoet.service;
 
-import org.apache.commons.codec.binary.Base32;
-import org.apache.commons.codec.binary.Base64;
 import org.springframework.stereotype.Service;
-import org.apache.commons.codec.digest.DigestUtils;
-
-import java.util.UUID;
 
 /**
  * @author the Poet <dogan_oguzhan@hotmail.com>
