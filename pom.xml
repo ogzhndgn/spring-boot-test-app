@@ -6,7 +6,8 @@
     <groupId>org.thepoet</groupId>
     <artifactId>spring-boot-test-app</artifactId>
     <version>0.0.4</version>
-    <packaging>war</packaging>
+
+    <packaging>pom</packaging>
 
     <name>spring-boot-test-app</name>
     <description>A Spring Boot web application which includes test / sample modules / projects.</description>
@@ -60,6 +61,11 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thepoet</groupId>
+            <artifactId>client-test-app</artifactId>
+            <version>0.0.2</version>
         </dependency>
     </dependencies>
 
