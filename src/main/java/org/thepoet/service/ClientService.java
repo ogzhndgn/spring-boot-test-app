@@ -32,4 +32,16 @@ public class ClientService {
 			return "N/A";
 		}
 	}
+
+	public void getValue() {
+		ConfigurationReader configurationReader = new ConfigurationReader("AppName", "databaseConnectionString", 100000);
+		boolean b = configurationReader.getValue(1);
+		System.out.println(b);
+		String s = configurationReader.getValue(2);
+		System.out.println(s);
+		int i = configurationReader.getValue(3);
+		System.out.println(i);
+		double d = configurationReader.getValue(4);
+		System.out.println(d);
+	}
 }

@@ -28,6 +28,7 @@ public class ClientController extends BaseController {
 
 		String randomUserCity = clientService.getBasicUserCity();
 		System.out.println("RANDOM USER CITY: " + randomUserCity);
+		clientService.getBasicUserCity();
 		ModelAndView modelAndView = new ModelAndView("welcome");
 		modelAndView.addObject("projectTitle", super.getPageTitle("Welcome Page"));
 		return modelAndView;
