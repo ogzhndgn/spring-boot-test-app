@@ -10,6 +10,7 @@
     <li><a href="${pageContext.request.contextPath}/dice">#2 Dice</a></li>
     <li><a href="${pageContext.request.contextPath}/users">#3 Users from Database</a></li>
     <li><a href="${pageContext.request.contextPath}/getid">#4 Get Unique Id</a></li>
+    <li><a href="${pageContext.request.contextPath}/vue-one">#5 Vue Test #1</a></li>
 </ul>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <artifactId>spring-boot-test-app</artifactId>
     <version>0.0.4</version>
 
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
     <name>spring-boot-test-app</name>
     <description>A Spring Boot web application which includes test / sample modules / projects.</description>
